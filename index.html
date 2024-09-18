@@ -6,14 +6,21 @@
     <title>My Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="./tailwind.config.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Ovo&family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
   </head>
 
-  <body class="overflow-x-hidden">
+  <body class="overflow-x-hidden font-Outfit leading-8">
     <div class="fixed top-0 right-0 -z-10 translate-y-[-80%]">
       <img src="./images/header-bg-color.jpg" alt="" class="w-full" />
     </div>
+
     <nav
-      class="w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50"
+      class="w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50 backdrop-blur-md bg-opacity-80 font-Ovo"
     >
       <img
         src="./images/logo.png"
@@ -21,7 +28,7 @@
         class="w-28 cursor-pointer mr-14"
       />
       <ul
-        class="hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 bg-white shadow-sm bg-opacity-50"
+        class="hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 bg-white shadow-sm bg-opacity-80 backdrop-blur-md"
       >
         <li><a href="#top">Home</a></li>
         <li><a href="#about">About me</a></li>
@@ -35,12 +42,12 @@
 
         <a
           href="#contact"
-          class="hidden lg:flex items-center gap-3 px-10 py-2.5 border border-gray-500 rounded-full ml-4"
+          class="hidden lg:flex items-center gap-3 px-10 py-2.5 border border-gray-500 rounded-full ml-4 backdrop-blur-md font-Ovo"
         >
           Contact<img
             src="./images/contact_icon.png"
             alt="contact_icon"
-            class="w-5"
+            class="w-5 font-Ovo"
           />
         </a>
 
@@ -77,13 +84,13 @@
         alt=""
         class="rounded-full w-28"
       />
-      <h3 class="flex items-end gap-2 text-xl md:text-2xl mb-3">
+      <h3 class="flex items-end gap-2 text-xl md:text-2xl mb-3 font-Ovo">
         Hey There! I'm Naveen Kumar 👋<img src="" alt="" class="w-6" />
       </h3>
-      <h1 class="text-3xl sm:text-6xl lg:text-[50px]">
+      <h1 class="text-3xl sm:text-6xl lg:text-[50px] font-Ovo">
         Computer Science and Engineering Student, 2025
       </h1>
-      <p class="max-w-2xl mx-auto">
+      <p class="max-w-2xl mx-auto font-Ovo">
         Computer science graduate with a strong foundation in programming,
         algorithms, and software development. Proficient in Python, Java, C++,
         and MySQL, with experience in Database management system, data analysis,
@@ -127,6 +134,21 @@
             alt=""
             class="w-64 sm:w-80 rounded-3xl max-w-none"
           />
+
+          <div
+            class="bg-white w-1/2 aspect-square absolute right-0 bottom-0 rounded-full translate-x-1/4 translate-y-1/3 shadow- [0_4px_55px_rgba (149,0,162,0.15)] flex items-center justify-center"
+          >
+            <img
+              src="./images/circular_text.png"
+              alt=""
+              class="w-full animate-spin_slow"
+            />
+            <img
+              src="./images/dev-icon.png"
+              alt=""
+              class="w-1/3 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+            />
+          </div>
         </div>
         <div class="flex-1">
           <p class="mb-10 max-w-2xl">
@@ -263,21 +285,21 @@
     <!-- -------------------- Skills ------------------->
 
     <div id="skills" class="w-full px-[12%] py-10 scroll-mt-20">
-      <h2 class="text-center text-5xl">Skills</h2>
+      <h2 class="text-center text-5xl font-Ovo">Skills</h2>
       <p class="text-center max-w-2xl mx-auto mt-5 mb-12">
         Things that I'm good at.
       </p>
 
       <div class="grid grid-cols-2 gap-6 my-10">
-        <!-- HTML & CSS -->
+        <!-- HTML -->
         <div class="w-full">
           <div class="flex justify-between items-center mb-2">
-            <span class="font-semibold text-lg">HTML & CSS</span>
+            <span class="font-semibold text-lg">HTML</span>
             <span class="font-semibold text-lg">75%</span>
           </div>
           <div class="w-full bg-gray-300 rounded-full h-6">
             <div
-              class="bg-orange-500 h-6 rounded-full"
+              class="bg-orange-600 h-6 rounded-full"
               style="width: 75%"
             ></div>
           </div>
@@ -374,15 +396,17 @@
     <!-- ------------------ Projects ------------------->
 
     <div id="projects" class="w-full px-[12%] py-10 scroll-mt-20">
-      <h2 class="text-center text-5xl">My Projects</h2>
-      <p class="text-center max-w-2xl mx-auto mt-5 mb-12">
+      <h2 class="text-center text-5xl font-Ovo">My Projects</h2>
+      <p class="text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo">
         My project aims to develop a user-friendly interface that addresses the
         specific needs of the client by providing an efficient, scalable, and
         secure solution.
       </p>
 
       <!-- Responsive Grid Layout -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 my-10">
+      <div
+        class="grid grid-cols-1 sm:grid-cols-auto lg:grid-cols-4 gap-6 my-10"
+      >
         <div
           class="border border-gray-400 rounded-lg px-8 py-12 hover:shadow-[4px_4px_0_#000] cursor-pointer hover:bg-[#dfdfff] hover:-translate-y-1 duration-500"
         >
@@ -468,83 +492,92 @@
       </div>
     </div>
 
-    <!--    <div id="projects" class="w-full px-[12%] py-10 scroll-mt-20">
-      <h2 class="text-center text-5xl">My Projects</h2>
+    <!--------------- contact ----------------->
+    <div
+      id="contact"
+      class="w-full px-[12%] py-10 scroll-mt-20 bg-[url('./images/footer-bg-color.png')] bg-no-repeat bg-[length:90%_auto] bg-center"
+    >
+      <h4 class="text-center mb-2 text-lg font-Ovo">Connect with me</h4>
+      <h2 class="text-center text-5xl font-Ovo">Get in touch</h2>
       <p class="text-center max-w-2xl mx-auto mt-5 mb-12">
-        My project aims to develop a user-friendly interface that addresses the
-        specific needs of the client by providing a efficient, scalable,and
-        secure solution.
+        I'd love to hear from you! If you have any questions, comments or
+        feedback, please use the form below.
       </p>
 
-      <div class="grid grid-cols-4 gap-6 my-10">
-        <div
-          class="border border-gray-400 rounded-lg px-8 py-12 hover:shadow-[4px_4px_0_#000] cursor-pointer hover:bg-[#dfdfff] hover:-translate-y-1 duration-500"
-        >
-          <img src="./images/shems_prj1.png" alt="1st Project" class="w-10" />
-          <h3 class="text-lg my-4 text-gray-700">
-            Smart Home Energy Management System
-          </h3>
-          <p class="text-sm text-gray-600 leading-5">
-            Description: <br />
-            Led software development for a system optimizing residential energy
-            usage through automation and analytics...
-          </p>
-          <a href="" class="flex items-center gap-2 text-sm mt-5"
-            >Read more
-            <img src="./images/right_arrow_icon.png" alt="" class="w-4"
-          /></a>
-        </div>
+      <form
+        action="https://api.web3forms.com/submit"
+        method="POST"
+        class="max-w-2xl mx-auto"
+      >
+        <input
+          type="hidden"
+          name="access_key"
+          value="a80e453d-adaa-407e-bc6e-425a80007fdc"
+        />
 
-        <div
-          class="border border-gray-400 rounded-lg px-8 py-12 hover:shadow-[4px_4px_0_#000] cursor-pointer hover:bg-[#dfdfff] hover:-translate-y-1 duration-500"
-        >
-          <img src="./images/shems_prj1.png" alt="1st Project" class="w-10" />
-          <h3 class="text-lg my-4 text-gray-700">My Portfolio</h3>
-          <p class="text-sm text-gray-600 leading-5">
-            Description: <br />
-            Template...
-          </p>
-          <a href="" class="flex items-center gap-2 text-sm mt-5"
-            >Read more
-            <img src="./images/right_arrow_icon.png" alt="" class="w-4"
-          /></a>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-10 mb-8">
+          <input
+            type="text"
+            placeholder="Enter your name"
+            class="flex-1 p-3 outline-none border-[0.5px] border-gray-400 rounded-md bg-white"
+            required
+            name="name"
+          />
+          <input
+            type="email"
+            placeholder="Enter your email"
+            class="flex-1 p-3 outline-none border-[0.5px] border-gray-400 rounded-md bg-white"
+            required
+            name="email"
+          />
         </div>
+        <textarea
+          rows="6"
+          placeholder="Enter your message"
+          class="w-full p-4 outline-none border-[0.5px] border-gray-400 rounded-md bg-white mb-6"
+          required
+          name="message"
+        ></textarea>
 
-        <div
-          class="border border-gray-400 rounded-lg px-8 py-12 hover:shadow-[4px_4px_0_#000] cursor-pointer hover:bg-[#dfdfff] hover:-translate-y-1 duration-500"
+        <button
+          type="submit"
+          class="py-3 px-8 w-max flex items-center justify-between gap-2 bg-black/80 text-white rounded-full mx-auto hover:bg-black duration-500"
         >
-          <img src="./images/shems_prj1.png" alt="1st Project" class="w-10" />
-          <h3 class="text-lg my-4 text-gray-700">Moblie Application</h3>
-          <p class="text-sm text-gray-600 leading-5">
-            Description: <br />
-            Template...
-          </p>
-          <a href="" class="flex items-center gap-2 text-sm mt-5"
-            >Read more
-            <img src="./images/right_arrow_icon.png" alt="" class="w-4"
-          /></a>
-        </div>
+          Submit now
+          <img
+            src="./images/right_white_arrow_icon.png"
+            alt="Arrow Icon"
+            class="w-4"
+          />
+        </button>
+      </form>
+    </div>
 
-        <div
-          class="border border-gray-400 rounded-lg px-8 py-12 hover:shadow-[4px_4px_0_#000] cursor-pointer hover:bg-[#dfdfff] hover:-translate-y-1 duration-500"
-        >
-          <img src="./images/shems_prj1.png" alt="1st Project" class="w-10" />
-          <h3 class="text-lg my-4 text-gray-700">Web Application</h3>
-          <p class="text-sm text-gray-600 leading-5">
-            Description: <br />
-            Template...
-          </p>
-          <a href="" class="flex items-center gap-2 text-sm mt-5"
-            >Read more
-            <img src="./images/right_arrow_icon.png" alt="" class="w-4"
-          /></a>
-        </div>
+    <!-- ------------------ footer ----------------->
 
-        <div
-          class="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7"
-        ></div>
+    <div class="mt-20">
+      <div class="text-center">
+        <img src="./images/logo.png" alt="" class="w-36 mx-auto mb-2" />
+        <div class="w-max flex items-center gap-2 mx-auto">
+          <img
+            src="./images/mail_icon.png"
+            alt=""
+            class="w-7"
+          />cse.snk@gmail.com
+        </div>
       </div>
-    </div>  -->
+
+      <div
+        class="text-center sm:flex items-center justify-between border-t border-gray-400 mx-[10%] my-12 py-6"
+      >
+        <p>© 2024 Naveen Kumar. All rights reserved.</p>
+        <ul class="flex items-center gap-10 justify-center mt-4 sm:mt-0">
+          <li><a href="https://instagram.com/greatstackdev">Instagram</a></li>
+          <li><a href="https://instagram.com/greatstackdev">GitHub</a></li>
+          <li><a href="https://instagram.com/greatstackdev">LinkedIn</a></li>
+        </ul>
+      </div>
+    </div>
 
     <script src="./script.js"></script>
   </body>
