@@ -1,9 +1,29 @@
-const sideMenu = document.querySelector('#sideMenu');
+const sideMenu = document.querySelector("#sideMenu");
+const navBar = document.querySelector("nav");
+const navLinks = document.querySelector("nav ul");
 
-function openMenu(){
-    sideMenu.style.transform = 'translateX(-16rem)';
+function openMenu() {
+  sideMenu.style.transform = "translateX(-16rem)";
 }
 
-function closeMenu(){
-    sideMenu.style.transform = 'translateX(16rem)';
+function closeMenu() {
+  sideMenu.style.transform = "translateX(16rem)";
 }
+
+window.addEventListener("scroll", () => {
+  if (scrolly > 50) {
+    navBar.classList.add(
+      "bg-white",
+      "bg-opacity-50",
+      "backdrop-blur-lg",
+      "shadow-sm"
+    );
+  } else {
+    navBar.classList.remove(
+      "bg-white",
+      "bg-opacity-50",
+      "backdrop-blur-lg",
+      "shadow-sm"
+    );
+  }
+});
